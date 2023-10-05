@@ -10,5 +10,5 @@ date = datetime.now().isoformat()
 output_dir = sys.argv[1]
 with open(os.path.join(output_dir, "write-output.txt"), 'w') as fw:
     fw.write(str(date))
-    fw.write(str(maap.profile.account_info()))
+    fw.write(str(maap.aws.earthdata_s3_credentials('https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials')))
     fw.write(" Output Product Write successfull")
