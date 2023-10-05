@@ -2,7 +2,7 @@ from datetime import datetime
 import sys
 import os
 from maap.maap import MAAP
-maap = MAAP(maap_host='api.dit.maap-project.org')
+maap = MAAP(maap_host='api.maap-project.org')
 
 print(maap.profile.account_info())
 
