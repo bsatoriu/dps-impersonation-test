@@ -5,3 +5,6 @@ channels:
 dependencies:
   - pandas
 
+  - pip:
+    - git+https://github.com/MAAP-Project/maap-py.git@v3.1.5
+
