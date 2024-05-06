@@ -9,8 +9,8 @@ printenv
 
 export MAAP_CONF=/maap-py/
 
-echo "Waiting 15 seconds..."
-sleep 15
+echo "Waiting 16 seconds..."
+sleep 16
 
 echo "Waiting 15 more seconds..."
 python ${basedir}/wait.py
