@@ -7,6 +7,12 @@ OUTPUTDIR="${PWD}/output"
 
 printenv
 
+echo "pwd"
+echo $(pwd)
+
+echo "whoami"
+echo $(whoami)
+
 echo "Waiting 15 seconds..."
 sleep 15
 
