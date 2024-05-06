@@ -24,6 +24,7 @@ dependencies:
   - rasterio
   - returns~=0.20
   - rioxarray
+  - s3fs
   - scalene~=1.5  # CPU+mem profiling
   - shapely~=2.0
   - typer~=0.9  # CLI
