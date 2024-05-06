@@ -16,6 +16,12 @@ echo $(whoami)
 echo "cd ~/ && pwd && ls -a"
 echo $(cd ~/ && pwd && ls -a)
 
+echo "ls -a /home/"
+echo $(ls -a /home/)
+
+echo "
+echo
+
 echo "Waiting 15 seconds..."
 sleep 15
 
