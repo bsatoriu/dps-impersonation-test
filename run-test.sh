@@ -13,6 +13,9 @@ echo $(pwd)
 echo "whoami"
 echo $(whoami)
 
+echo "cd ~/ && pwd && ls -a"
+echo $(cd ~/ && pwd && ls -a)
+
 echo "Waiting 15 seconds..."
 sleep 15
 
