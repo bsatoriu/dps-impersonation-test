@@ -19,8 +19,10 @@ echo $(cd ~/ && pwd && ls -a)
 echo "ls -a /home/"
 echo $(ls -a /home/)
 
-echo "
-echo
+echo "cat ~/.aws/config"
+echo $(cat ~/.aws/config)
+
+export AWS_CONFIG_FILE="/home/ops/.aws/config"
 
 echo "Waiting 15 seconds..."
 sleep 15
