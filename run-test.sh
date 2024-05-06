@@ -7,13 +7,7 @@ OUTPUTDIR="${PWD}/output"
 
 printenv
 
-echo "Installing maap-py..."
-
-RUN mkdir /maap-py-alt \
-    && git clone --single-branch --branch v3.1.5 https://github.com/MAAP-Project/maap-py.git /maap-py-alt/ \
-    && pip install -e /maap-py-alt/
-
-export MAAP_CONF=/maap-py-alt/
+export MAAP_CONF=/maap-py/
 
 echo "Waiting 5 seconds..."
 sleep 5
