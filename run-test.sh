@@ -22,7 +22,8 @@ echo $(ls -a /home/)
 echo "cat ~/.aws/config"
 echo $(cat ~/.aws/config)
 
-export AWS_CONFIG_FILE="/home/ops/.aws/config"
+echo "AWS_CONFIG_FILE"
+echo $(AWS_CONFIG_FILE)
 
 echo "Waiting 15 seconds..."
 sleep 15
