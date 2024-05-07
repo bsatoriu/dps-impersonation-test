@@ -22,10 +22,18 @@ with open(os.path.join(output_dir, "write-output.txt"), 'w') as fw:
 
     s3_fsspec = fsspec.filesystem("s3", profile="maap-data-reader")
     s3_rasterio = rasterio.Env(AWSSession(profile_name="maap-data-reader"))
-    nsidc_object = "s3://nsidc-cumulus-prod-protected/ATLAS/ATL08/006/2023/06/21/ATL08_20230621235543_00272011_006_01.h5"
-    with s3_fsspec.open(nsidc_object) as f:
-        ds = xarray.open_dataset(f, group='gt1l/land_segments', engine="h5netcdf", phony_dims='sort')
-        fw.write(str(ds))
+    # nsidc_object = "s3://nsidc-cumulus-prod-protected/ATLAS/ATL08/006/2023/06/21/ATL08_20230621235543_00272011_006_01.h5"
+    # with s3_fsspec.open(nsidc_object) as f:
+    #     ds = xarray.open_dataset(f, group='gt1l/land_segments', engine="h5netcdf", phony_dims='sort')
+    #     fw.write(str(ds))
+    #     fw.write("Output xarray.Dataset successful")
+
+    ges_disc_object = "s3://gesdisc-cumulus-prod-protected/Landslide/Global_Landslide_Nowcast.1.1/2020/Global_Landslide_Nowcast_v1.1_20201231.tif"
+    
+    with s3_fsspec.open(ges_disc_object) as obj:
+        data_array = rioxarray.open_rasterio(obj)
+        fw.write(str(data_array))
         fw.write("Output xarray.Dataset successful")
+    
 
 
